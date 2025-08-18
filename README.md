@@ -5,8 +5,6 @@ The python dependencies for Martinize are:
 4-Vermouth
 
 STEPS:
-python propka-3.0/propka.py fold_fv_model_0.pdb --pH 7.4
-
 pdb2pqr --ff=CHARMM         --with-ph=7.4         --keep-chain         --titration-state-method=propka      --pdb-output=fold_fv_model_0_propka.pdb         fold_fv_model_0.pdb fold_fv_model_0_propka.pqr
-
-martinize2 -f fold_fv/fold_fv_model_0.pdb -o fv_model_0.top -x fv_model_0.pdb -dssp -id-regions 692:1601 -water-bias -water-bias-eps idr:0.5
+martinize2 -f fold_fv_model_0_propka.pdb -x FV_CG.pdb -o FV_CG.top -ff martini3IDP -p backbone -dssp -elastic -el 0 -eu 0.85 -eunit 1:691,1602:2196 -id-regions 692:1601 -idr-tune
+/data1/dveizaj/FV/.venv/bin/insane -f FV_CG.pdb -o FV_CG.gro -p FV_CG.top -pbc cubic -box 35,35,35 -salt 0.15 -sol W -d 0
