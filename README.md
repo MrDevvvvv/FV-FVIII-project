@@ -12,4 +12,6 @@ martinize2 -f fold_fv_model_0_propka.pdb -x FV_CG.pdb -o FV_CG.top -ff martini3I
 
 /data1/dveizaj/FV/.venv/bin/insane -f FV_CG.pdb -o FV_CG.gro -p FV_CG.top -pbc cubic -box 35,35,35 -salt 0.15 -sol W -d 0
 
+Adjust the .top file
+
 gmx grompp -p FV_CG.top -c FV_CG.gro -f mdp_dg/00.martini_mini.mdp -o minimization.tpr -r FV_CG.gro -maxwarn 1
