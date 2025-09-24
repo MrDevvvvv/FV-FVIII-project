@@ -1,0 +1,16 @@
+#include "./martini_v3.0.0.itp"
+#include "./martini_v3.0.0_ions_v1.itp"
+#include "./martini_v3.0.0_solvents_v1.itp"
+#include "FV_CG.itp"
+
+[ system ]
+; name
+Insanely solvated protein.
+
+
+[ molecules ]
+; name  number
+molecule_0          1
+W            59862
+NA            688
+CL            631
