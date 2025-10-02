@@ -6,7 +6,7 @@ The python dependencies for Martinize are:
 
 STEPS:
 
-<pre>  </pre>pdb2pqr --ff=CHARMM         --with-ph=7.4         --keep-chain         --titration-state-method=propka      --pdb-output=fold_fv_model_0_propka.pdb         fold_fv_model_0.pdb fold_fv_model_0_propka.pqr </pre>
+<pre>  pdb2pqr --ff=CHARMM         --with-ph=7.4         --keep-chain         --titration-state-method=propka      --pdb-output=fold_fv_model_0_propka.pdb         fold_fv_model_0.pdb fold_fv_model_0_propka.pqr </pre>
 
 <pre> martinize2 -f fold_fv_model_0_propka.pdb -x FV_CG.pdb -o FV_CG.top -ff martini3IDP -p backbone -dssp -elastic -el 0 -eu 0.85 -eunit 1:663,1546:2196 -id-regions 664:1545 -idr-tune </pre>
 
