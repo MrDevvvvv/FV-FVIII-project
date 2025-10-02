@@ -10,7 +10,7 @@ STEPS:
 
 <pre> martinize2 -f fold_fv_model_0_propka.pdb -x FV_CG.pdb -o FV_CG.top -ff martini3IDP -p backbone -dssp -elastic -el 0 -eu 0.85 -eunit 1:663,1546:2196 -id-regions 664:1545 -idr-tune </pre>
 
-<pre> /data1/dveizaj/FV/.venv/bin/insane -f FV_CG.pdb -o FV_CG.gro -p FV_CG.top -pbc cubic -box 20,20,20 -salt 0.15 -sol W -d 0 </pre>
+<pre> /data1/dveizaj/FV/.venv/bin/insane -f FV_CG.pdb -o FV_CG.gro -p FV_CG.top -pbc polyhexagonal -box 20,20,20 -salt 0.15 -sol W -d 0 </pre>
 
 Adjust the .top file
 
